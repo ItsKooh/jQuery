@@ -1,0 +1,44 @@
+<!--
+    Wrapper
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Wrapper 테스트 페이지</title>
+        <style type="text/css">
+            .selected {
+                background-color: red;
+            }
+        </style>
+    </head>
+
+
+
+    <body>
+        <ul id="navigation">
+            <li>Javascript</li>
+            <li>jQuery</li>
+            <li class="selected">AngularJS</li>
+            <li>NodeJS</li>
+            <li>Spring</li>
+            <li>MySQL</li>
+        </ul>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+            (function($) {
+                $('#navigation li').bind ( 'click', function ( e ) {
+                    $('#navigation li').removeClass ( 'selected' );
+                    $(this).addClass ( 'selected' );
+                });
+
+                $('html').css ( 'background-color', 'green' );
+            })(jQuery);
+        </script>
+    </body>
+
+</html>
